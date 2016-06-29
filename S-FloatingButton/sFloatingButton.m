@@ -72,12 +72,12 @@ CGFloat buttonToScreenHeight;
     [fButtonView addGestureRecognizer:buttonClose];
     
     // Overlay view
-    UIBlurEffect *blurOverlay = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    
+    UIBlurEffect *blurOverlay = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *fFloatView = [[UIVisualEffectView alloc]initWithEffect:blurOverlay];
     
+    
     bgView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    bgView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+    bgView.backgroundColor = [UIColor colorWithWhite:0 alpha:10.10];
     bgView.alpha = 0;
     bgView.userInteractionEnabled = YES;
     
@@ -223,10 +223,8 @@ CGFloat buttonToScreenHeight;
         
         UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake( 50, 10,150, 20)];
         titleLabel.tag = 2;
-        titleLabel.textColor = [UIColor whiteColor];
         titleLabel.textAlignment= NSTextAlignmentRight;
         [cell.contentView addSubview:titleLabel];
-        
         
         UIView *  overlay = [UIView new];
         overlay.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.6];
