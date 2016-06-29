@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63048E7C1D1DB24E00D134D2 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 63048E761D1DB24E00D134D2 /* cross.png */; };
+		63048E7D1D1DB24E00D134D2 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 63048E771D1DB24E00D134D2 /* plus.png */; };
 		633282251D1D9CB6004247E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 633282241D1D9CB6004247E4 /* main.m */; };
 		633282281D1D9CB6004247E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 633282271D1D9CB6004247E4 /* AppDelegate.m */; };
 		6332822B1D1D9CB6004247E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6332822A1D1D9CB6004247E4 /* ViewController.m */; };
 		6332822E1D1D9CB6004247E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6332822C1D1D9CB6004247E4 /* Main.storyboard */; };
 		633282301D1D9CB6004247E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6332822F1D1D9CB6004247E4 /* Assets.xcassets */; };
 		633282331D1D9CB6004247E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633282311D1D9CB6004247E4 /* LaunchScreen.storyboard */; };
+		633948B11D1FE8D70080EABF /* sFloatingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 633948B01D1FE8D70080EABF /* sFloatingButton.m */; };
+		63A750971D244E6C00E3BA23 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750941D244E6C00E3BA23 /* apple.png */; };
+		63A750981D244E6C00E3BA23 /* blackberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750951D244E6C00E3BA23 /* blackberry.png */; };
+		63A750991D244E6C00E3BA23 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750961D244E6C00E3BA23 /* photo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63048E761D1DB24E00D134D2 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		63048E771D1DB24E00D134D2 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		633282201D1D9CB5004247E4 /* S-FloatingButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S-FloatingButton.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		633282241D1D9CB6004247E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		633282261D1D9CB6004247E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +34,11 @@
 		6332822F1D1D9CB6004247E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		633282321D1D9CB6004247E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		633282341D1D9CB6004247E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633948AF1D1FE8D70080EABF /* sFloatingButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sFloatingButton.h; sourceTree = "<group>"; };
+		633948B01D1FE8D70080EABF /* sFloatingButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sFloatingButton.m; sourceTree = "<group>"; };
+		63A750941D244E6C00E3BA23 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		63A750951D244E6C00E3BA23 /* blackberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackberry.png; sourceTree = "<group>"; };
+		63A750961D244E6C00E3BA23 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +71,11 @@
 		633282221D1D9CB6004247E4 /* S-FloatingButton */ = {
 			isa = PBXGroup;
 			children = (
+				6332823C1D1DA7CA004247E4 /* Controllers */,
+				6332823B1D1DA7BF004247E4 /* Ressource */,
+				6332823A1D1DA7AB004247E4 /* FloatingButton */,
 				633282261D1D9CB6004247E4 /* AppDelegate.h */,
 				633282271D1D9CB6004247E4 /* AppDelegate.m */,
-				633282291D1D9CB6004247E4 /* ViewController.h */,
-				6332822A1D1D9CB6004247E4 /* ViewController.m */,
 				6332822C1D1D9CB6004247E4 /* Main.storyboard */,
 				6332822F1D1D9CB6004247E4 /* Assets.xcassets */,
 				633282311D1D9CB6004247E4 /* LaunchScreen.storyboard */,
@@ -77,6 +91,36 @@
 				633282241D1D9CB6004247E4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6332823A1D1DA7AB004247E4 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				633948AF1D1FE8D70080EABF /* sFloatingButton.h */,
+				633948B01D1FE8D70080EABF /* sFloatingButton.m */,
+			);
+			name = FloatingButton;
+			sourceTree = "<group>";
+		};
+		6332823B1D1DA7BF004247E4 /* Ressource */ = {
+			isa = PBXGroup;
+			children = (
+				63A750941D244E6C00E3BA23 /* apple.png */,
+				63A750951D244E6C00E3BA23 /* blackberry.png */,
+				63A750961D244E6C00E3BA23 /* photo.png */,
+				63048E761D1DB24E00D134D2 /* cross.png */,
+				63048E771D1DB24E00D134D2 /* plus.png */,
+			);
+			name = Ressource;
+			sourceTree = "<group>";
+		};
+		6332823C1D1DA7CA004247E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				633282291D1D9CB6004247E4 /* ViewController.h */,
+				6332822A1D1D9CB6004247E4 /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +180,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63048E7C1D1DB24E00D134D2 /* cross.png in Resources */,
 				633282331D1D9CB6004247E4 /* LaunchScreen.storyboard in Resources */,
 				633282301D1D9CB6004247E4 /* Assets.xcassets in Resources */,
+				63A750981D244E6C00E3BA23 /* blackberry.png in Resources */,
 				6332822E1D1D9CB6004247E4 /* Main.storyboard in Resources */,
+				63A750971D244E6C00E3BA23 /* apple.png in Resources */,
+				63A750991D244E6C00E3BA23 /* photo.png in Resources */,
+				63048E7D1D1DB24E00D134D2 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +200,7 @@
 			files = (
 				6332822B1D1D9CB6004247E4 /* ViewController.m in Sources */,
 				633282281D1D9CB6004247E4 /* AppDelegate.m in Sources */,
+				633948B11D1FE8D70080EABF /* sFloatingButton.m in Sources */,
 				633282251D1D9CB6004247E4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +352,7 @@
 				633282391D1D9CB6004247E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
