@@ -19,6 +19,10 @@
 		63A750971D244E6C00E3BA23 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750941D244E6C00E3BA23 /* apple.png */; };
 		63A750981D244E6C00E3BA23 /* blackberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750951D244E6C00E3BA23 /* blackberry.png */; };
 		63A750991D244E6C00E3BA23 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750961D244E6C00E3BA23 /* photo.png */; };
+		63A7509D1D25952D00E3BA23 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A7509A1D25952D00E3BA23 /* facebook.png */; };
+		63A7509E1D25952D00E3BA23 /* googlePlus.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A7509B1D25952D00E3BA23 /* googlePlus.png */; };
+		63A7509F1D25952D00E3BA23 /* Instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A7509C1D25952D00E3BA23 /* Instagram.png */; };
+		63A750A11D259AC900E3BA23 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A750A01D259AC900E3BA23 /* box.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		63A750941D244E6C00E3BA23 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 		63A750951D244E6C00E3BA23 /* blackberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackberry.png; sourceTree = "<group>"; };
 		63A750961D244E6C00E3BA23 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		63A7509A1D25952D00E3BA23 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		63A7509B1D25952D00E3BA23 /* googlePlus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googlePlus.png; sourceTree = "<group>"; };
+		63A7509C1D25952D00E3BA23 /* Instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instagram.png; sourceTree = "<group>"; };
+		63A750A01D259AC900E3BA23 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 		6332823B1D1DA7BF004247E4 /* Ressource */ = {
 			isa = PBXGroup;
 			children = (
+				63A750A01D259AC900E3BA23 /* box.png */,
+				63A7509A1D25952D00E3BA23 /* facebook.png */,
+				63A7509B1D25952D00E3BA23 /* googlePlus.png */,
+				63A7509C1D25952D00E3BA23 /* Instagram.png */,
 				63A750941D244E6C00E3BA23 /* apple.png */,
 				63A750951D244E6C00E3BA23 /* blackberry.png */,
 				63A750961D244E6C00E3BA23 /* photo.png */,
@@ -182,12 +194,16 @@
 			files = (
 				63048E7C1D1DB24E00D134D2 /* cross.png in Resources */,
 				633282331D1D9CB6004247E4 /* LaunchScreen.storyboard in Resources */,
+				63A7509E1D25952D00E3BA23 /* googlePlus.png in Resources */,
+				63A750A11D259AC900E3BA23 /* box.png in Resources */,
 				633282301D1D9CB6004247E4 /* Assets.xcassets in Resources */,
 				63A750981D244E6C00E3BA23 /* blackberry.png in Resources */,
+				63A7509D1D25952D00E3BA23 /* facebook.png in Resources */,
 				6332822E1D1D9CB6004247E4 /* Main.storyboard in Resources */,
 				63A750971D244E6C00E3BA23 /* apple.png in Resources */,
 				63A750991D244E6C00E3BA23 /* photo.png in Resources */,
 				63048E7D1D1DB24E00D134D2 /* plus.png in Resources */,
+				63A7509F1D25952D00E3BA23 /* Instagram.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

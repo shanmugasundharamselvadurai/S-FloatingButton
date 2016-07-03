@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "sFloatingButton.h"
 
+#define  viewWidth [UIScreen mainScreen].bounds.size.width
+#define  viewHeight   [UIScreen mainScreen].bounds.size.height
+
 @interface ViewController ()<floatingButtonDelegate>
 
 
@@ -24,18 +27,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-     CGRect floatFrame = CGRectMake([UIScreen mainScreen].bounds.size.width - 44 - 20, [UIScreen mainScreen].bounds.size.height - 44 - 20, 44, 44);
+     CGRect floatFrame = CGRectMake(viewWidth- 64, viewHeight-64, 50, 50);
 
     floatBustton = [[sFloatingButton alloc]initWithFrame:floatFrame normalImage:[UIImage imageNamed:@"plus.png"]  andPressedImage:[UIImage imageNamed:@"cross.png"]];
     
-    floatBustton.imageArray = @[@"photo",@"blackberry",@"apple"];
-    floatBustton.labelArray = @[@"photo",@"BlackBerry",@"Apple"];
+    floatBustton.imageArray = @[@"googlePlus.png",@"instagram.png",@"facebook.png"];
+    floatBustton.labelArray = @[@"Google Plus",@"Instagram",@"Facebook"];
     floatBustton.fDelegate = self;
-    
     
     [self.view addSubview:floatBustton];
     
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+        [self.navigationController.navigationBar setBarTintColor:[UIColor greenColor]];
+       // [self.navigationController.navigationBar setTranslucent:NO];
 }
 
 - (void)didReceiveMemoryWarning {

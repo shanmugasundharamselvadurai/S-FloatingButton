@@ -11,6 +11,10 @@
 #define  viewWidth [UIScreen mainScreen].bounds.size.width
 #define  viewHeight   [UIScreen mainScreen].bounds.size.height
 
+
+#define XScale [[UIScreen mainScreen] bounds].size.width / 320.0f
+#define YScale [[UIScreen mainScreen] bounds].size.height / 568.0f
+
 CGFloat animationTime =  0.50;
 CGFloat rowHeight = 60.f;
 NSInteger noOfRows = 0;
@@ -36,12 +40,11 @@ CGFloat buttonToScreenHeight;
         mainWindow = [UIApplication sharedApplication].keyWindow;
         
         //Initizaliting Button frame
-        fButtonView =[[UIView alloc]initWithFrame:frame];
         
+        fButtonView =[[UIView alloc]initWithFrame:frame];
         buttonToScreenHeight = viewHeight-CGRectGetMaxY(self.frame);
         
-        fMenuTableView = [[UITableView alloc]initWithFrame:CGRectMake(viewWidth/4,0,0.75*viewHeight,viewHeight-(viewHeight -CGRectGetMaxY(self.frame)))];
-        fMenuTableView.tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0,0,viewWidth/2,CGRectGetHeight(frame))];
+        fMenuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0,320*XScale,viewHeight-buttonToScreenHeight)];
         fMenuTableView.delegate = self;
         fMenuTableView.dataSource = self;
         fMenuTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -72,17 +75,18 @@ CGFloat buttonToScreenHeight;
     [fButtonView addGestureRecognizer:buttonClose];
     
     // Overlay view
-    UIBlurEffect *blurOverlay = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    UIVisualEffectView *fFloatView = [[UIVisualEffectView alloc]initWithEffect:blurOverlay];
+  //  UIBlurEffect *blurOverlay = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+   // UIVisualEffectView *fFloatView = [[UIVisualEffectView alloc]initWithEffect:blurOverlay];
     
     
     bgView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    bgView.backgroundColor = [UIColor colorWithWhite:0 alpha:10.10];
+    bgView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
     bgView.alpha = 0;
     bgView.userInteractionEnabled = YES;
     
-    fFloatView.frame = bgView.bounds;
-    bgView = fFloatView;
+   // fFloatView.frame = bgView.bounds;
+   // bgView = fFloatView;
+    [self addSubview:bgView];
     
     UITapGestureRecognizer *closeOverLlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(buttonAction:)];
     closeOverLlay.cancelsTouchesInView = NO;
@@ -113,12 +117,7 @@ CGFloat buttonToScreenHeight;
 #pragma - mark ButtonAction
 -(void)buttonAction:(id)sender{
     
-    if (isMenuVisible){
-        
-        [self hideMenu:nil];
-    }
-    
-    else {
+    if (!isMenuVisible){
         
         [mainWindowView addSubview:bgView];
         [mainWindowView addSubview:fButtonView];
@@ -126,6 +125,11 @@ CGFloat buttonToScreenHeight;
         [mainWindow addSubview:mainWindowView];
         [self showMenu:nil];
     }
+    
+    else {
+        [self hideMenu:nil];
+
+        }
     isMenuVisible  = !isMenuVisible;
     
 }
@@ -214,16 +218,22 @@ CGFloat buttonToScreenHeight;
         cell.backgroundColor = [UIColor clearColor];
         cell.contentView.transform = CGAffineTransformMakeRotation(-M_PI);
     
-        UIImageView *iCons = [[UIImageView alloc]initWithFrame:CGRectMake(215, 0,45, 45)];
+        UIImageView *iCons = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.origin.x-5*XScale, 0,45*XScale, 45*YScale)];
         iCons.tag = 1;
         iCons.clipsToBounds = YES;
         [iCons.layer setCornerRadius:iCons.frame.size.width/2.0f];
         [iCons.layer setMasksToBounds:YES];
         [cell.contentView addSubview:iCons];
         
-        UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake( 50, 10,150, 20)];
+        UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.frame.origin.x-180*XScale, 10*YScale,150*XScale, 25*YScale)];
         titleLabel.tag = 2;
-        titleLabel.textAlignment= NSTextAlignmentRight;
+        //titleLabel.backgroundColor = [UIColor whiteColor];
+        titleLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"box.png"]];
+        titleLabel.textAlignment= NSTextAlignmentCenter;
+        titleLabel.textColor = [ UIColor darkGrayColor];
+        titleLabel.layer.cornerRadius = 4;
+        titleLabel.layer.masksToBounds = YES;
+
         [cell.contentView addSubview:titleLabel];
         
         UIView *  overlay = [UIView new];
